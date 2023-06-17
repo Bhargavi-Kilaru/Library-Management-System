@@ -27,13 +27,13 @@ It has total four module: "Display Books", "Issue Books", "Return Books", "Add B
         if books_id in self.books_dict.keys():
             if not self.books_dict[books_id]["Status"] == "Available":
                 print (f"This books is already issued to {self.books_dict[books_id]['lender_name']}\ on {self.books_dict[books_id]['Issue_date']}")
-            return self.Issue_books ()
-        elif self.books_dict [books_id] [ 'Status'] == "Available":
-            your_name = input("Enter your name: ")
-            self.books_dict [books_id]['lender_name'] = your_name
-            self.books_dict[books_id]['Issue_date'] = current_date
-            self.books_dict [books_id]['Status'] ="Already Issued"
-            print("Books Issued Successfully !!! \n")
+                return self.Issue_books ()
+            elif self.books_dict [books_id] [ 'Status'] == "Available":
+                your_name = input("Enter your name: ")
+                self.books_dict [books_id]['lender_name'] = your_name
+                self.books_dict[books_id]['Issue_date'] = current_date
+                self.books_dict [books_id]['Status'] ="Already Issued"
+                print("Books Issued Successfully !!! \n")
         else:
             print("Book ID not found !!!")
     
